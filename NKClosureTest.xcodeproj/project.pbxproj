@@ -27,6 +27,7 @@
 		305D00461B4E647100F00B39 /* NKBootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKBootController.swift; sourceTree = "<group>"; };
 		305D00471B4E647100F00B39 /* NKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKViewController.swift; sourceTree = "<group>"; };
 		305D00521B4E652500F00B39 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = NKClosureTest/Info.plist; sourceTree = SOURCE_ROOT; };
+		305D00561B4E778100F00B39 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		305DFFFF1B4E5F0200F00B39 /* NKHandlerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NKHandlerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +109,7 @@
 			children = (
 				305D00451B4E647100F00B39 /* AppDelegate.swift */,
 				305D00461B4E647100F00B39 /* NKBootController.swift */,
+				305D00561B4E778100F00B39 /* README.md */,
 			);
 			path = Boot;
 			sourceTree = "<group>";
