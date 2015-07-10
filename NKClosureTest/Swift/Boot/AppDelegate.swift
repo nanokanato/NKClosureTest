@@ -29,8 +29,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
         //ウィンドウの生成
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         //ルートビューコントローラーの作成
-        let bootController = NKBootController();
-        bootController.bootHandler = { boot,flag -> Void in
+        let bootController = NKBootController(handler:{ boot,flag -> Void in
             //ウインドウの初期化
             self.window!.rootViewController = nil
             self.window = nil
@@ -43,7 +42,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
             self.window!.rootViewController = viewController;
             //Windowの表示
             self.window?.makeKeyAndVisible()
-        }
+        });
         
         //ルートビューコントローラーの指定
         self.window!.rootViewController = bootController;

@@ -16,8 +16,27 @@ import UIKit
 ======================================================================*/
 class NKBootController : UIViewController {
     
-    //delegateを保持する変数
-    var bootHandler:((NKBootController,Bool) -> Void)!
+    //delegateを保持する変数(アクセス修飾子privateで同じファイル内からしかアクセスできないようにする)
+    private var bootHandler:((NKBootController,Bool) -> Void)!
+    
+    /*-----------------------------------------------------------------
+    ; init coder : コンパイラおよび組み込みプログラムにStoryBoardでの実装を許可しないようにするために必須のメソッド
+    ;         in : aDecoder(NSCoder)
+    ;        out :
+    ------------------------------------------------------------------*/
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    /*-----------------------------------------------------------------
+    ; init : クロージャ変数を受け取って初期化
+    ;   in : handler((NKBootController,Bool) -> Void))
+    ;  out :
+    ------------------------------------------------------------------*/
+    init(handler:((NKBootController,Bool) -> Void)) {
+        bootHandler = handler
+        super.init(nibName: nil, bundle: nil)
+    }
     
     /*-----------------------------------------------------------------
     ; viewDidLoad : 初回Viewの読み込み時に呼び出される
