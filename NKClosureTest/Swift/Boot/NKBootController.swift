@@ -20,7 +20,7 @@ class NKBootController : UIViewController {
     private var bootHandler:((NKBootController,Bool) -> Void)!
     
     /*-----------------------------------------------------------------
-    ; init coder : コンパイラおよび組み込みプログラムにStoryBoardでの実装を許可しないようにするために必須のメソッド
+    ; init coder : StoryBoardでの実装を許可しないようにするために必須のメソッド
     ;         in : aDecoder(NSCoder)
     ;        out :
     ------------------------------------------------------------------*/
@@ -44,7 +44,7 @@ class NKBootController : UIViewController {
     ;         out :
     ------------------------------------------------------------------*/
     override func viewDidLoad() {
-        //背景を白色にする
+        //背景を黒色にする
         self.view.backgroundColor = UIColor.blackColor()
         
         //白い円形のViewを画面中央に配置
