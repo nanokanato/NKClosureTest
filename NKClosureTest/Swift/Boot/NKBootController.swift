@@ -29,13 +29,25 @@ class NKBootController : UIViewController {
     }
     
     /*-----------------------------------------------------------------
-    ; init : クロージャ変数を受け取って初期化
-    ;   in : handler((NKBootController,Bool) -> Void))
+    ; init : 初期化メソッド(必須)
+    ;   in :
     ;  out :
     ------------------------------------------------------------------*/
-    init(handler:((NKBootController,Bool) -> Void)) {
-        bootHandler = handler
+    init() {
+        //インスタンス生成
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    /*-----------------------------------------------------------------
+    ; init : init()の補助メソッド。初期化時にhandlerを設定できる
+    ;   in : handler:(NKBootController,Bool) -> Void)
+    ;  out :
+    ------------------------------------------------------------------*/
+    convenience init(handler:((NKBootController,Bool) -> Void)) {
+        //初期化メソッドを呼ぶ
+        self.init()
+        //handlerの引き渡し
+        bootHandler = handler
     }
     
     /*-----------------------------------------------------------------

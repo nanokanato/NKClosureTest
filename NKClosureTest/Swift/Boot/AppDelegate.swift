@@ -18,7 +18,6 @@ import UIKit
 class AppDelegate : UIResponder, UIApplicationDelegate {
     
     var window:UIWindow? //?はnilを許容するかどうかを明示的に指定する
-    
     /*-----------------------------------------------------------------
     ; didFinishLaunchingWithOptions : アプリを起動した際に呼び出される
     ;                            in : application(UIApplication)
@@ -29,7 +28,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
         //ウィンドウの生成
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         //ルートビューコントローラーの作成
-        let bootController = NKBootController(handler:{ boot,flag -> Void in
+        let bootController = NKBootController(handler:{[unowned self] boot, flag -> Void in
             //ウインドウの初期化
             self.window!.rootViewController = nil
             self.window = nil
